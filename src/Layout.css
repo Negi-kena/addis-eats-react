@@ -1,0 +1,17 @@
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-shell__content {
+  flex: 1;
+  padding-bottom: calc(var(--bottom-nav-height) + var(--space-4));
+}
+
+@media (min-width: 1024px) {
+  .app-shell__content {
+    padding-bottom: 0;
+    padding-top: calc(var(--top-nav-height) + var(--space-5));
+  }
+}

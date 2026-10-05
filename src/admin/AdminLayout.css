@@ -1,0 +1,112 @@
+.admin-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--color-bg);
+}
+
+.admin-header {
+  position: sticky;
+  top: 0;
+  z-index: 15;
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.admin-header__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: var(--space-3) var(--space-4);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  min-height: 56px;
+}
+
+.admin-header__brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.admin-header__brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.admin-header__brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+}
+
+.admin-header__brand-name {
+  font-weight: 800;
+  font-size: var(--font-size-lg);
+  color: var(--color-accent);
+}
+
+.admin-header__page-title {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.admin-header__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.admin-header__storefront {
+  display: none;
+  align-items: center;
+  gap: 6px;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+}
+
+.admin-header__logout {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-muted);
+}
+
+.admin-header__logout:hover {
+  background: var(--color-accent-tint);
+  color: var(--color-accent);
+}
+
+.admin-shell__content {
+  flex: 1;
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+  padding: var(--space-5) var(--space-4) calc(var(--bottom-nav-height) + var(--space-6));
+}
+
+@media (min-width: 768px) {
+  .admin-header__storefront {
+    display: flex;
+  }
+
+  .admin-shell__content {
+    padding-bottom: var(--space-8);
+  }
+}
+
+.admin-dashboard__week-total {
+  font-weight: 700;
+  color: var(--color-accent);
+}

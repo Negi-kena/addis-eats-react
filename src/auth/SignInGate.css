@@ -1,0 +1,46 @@
+.sign-in-gate {
+  padding-top: var(--space-6);
+  padding-bottom: var(--space-8);
+}
+
+.sign-in-gate h1 {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+}
+
+.sign-in-gate p {
+  color: var(--color-text-muted);
+  margin-top: var(--space-2);
+}
+
+.sign-in-gate form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-top: var(--space-5);
+}
+
+.sign-in-gate label {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  margin-top: var(--space-3);
+}
+
+.sign-in-gate input {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-3);
+}
+
+.sign-in-gate input[aria-invalid='true'] {
+  border-color: var(--color-accent);
+}
+
+.sign-in-gate__error {
+  font-size: var(--font-size-xs);
+  color: var(--color-accent);
+}
+
+.sign-in-gate button {
+  margin-top: var(--space-4);
+}

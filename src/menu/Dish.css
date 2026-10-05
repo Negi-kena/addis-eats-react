@@ -1,0 +1,180 @@
+.dish {
+  position: relative;
+  padding-bottom: calc(var(--bottom-nav-height) + 96px);
+}
+
+.dish__back {
+  position: absolute;
+  top: var(--space-4);
+  left: var(--space-4);
+  z-index: 5;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text);
+}
+
+.dish__media {
+  margin: 0 calc(-1 * var(--space-4));
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--color-accent-tint);
+  position: relative;
+}
+
+.dish__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.dish__badge {
+  position: absolute;
+  bottom: var(--space-3);
+  left: var(--space-3);
+  background: var(--color-text);
+  color: #fff;
+  font-size: var(--font-size-xs);
+  padding: 2px var(--space-2);
+  border-radius: var(--radius-sm);
+}
+
+.dish__info {
+  padding-top: var(--space-5);
+}
+
+.dish__title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-3);
+}
+
+.dish__title-row h1 {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+}
+
+.dish__price {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  color: var(--color-accent);
+  white-space: nowrap;
+}
+
+.dish__description {
+  margin-top: var(--space-2);
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+.dish__section {
+  margin-top: var(--space-5);
+}
+
+.dish__section h2 {
+  font-size: var(--font-size-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-2);
+}
+
+.dish__section label {
+  display: block;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  margin-bottom: var(--space-2);
+}
+
+.dish__section textarea {
+  width: 100%;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-3);
+  resize: vertical;
+  font-family: inherit;
+}
+
+.dish__status {
+  padding: var(--space-6) 0;
+  text-align: center;
+  color: var(--color-text-muted);
+}
+
+.dish__status--error {
+  color: var(--color-accent);
+}
+
+.dish__back-link {
+  display: block;
+  text-align: center;
+  color: var(--color-accent);
+  font-weight: 600;
+  margin-top: var(--space-4);
+}
+
+.dish__action-bar {
+  position: fixed;
+  bottom: var(--bottom-nav-height);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: var(--max-content-width);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-nav);
+  padding: var(--space-3) var(--space-4);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  z-index: 9;
+}
+
+.dish__stepper {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  padding: var(--space-1) var(--space-2);
+}
+
+.dish__stepper button {
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-bg);
+}
+
+.dish__stepper button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.dish__stepper span {
+  min-width: 20px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.dish__add-btn {
+  flex: 1;
+  text-align: center;
+}
+
+/* On desktop the bottom nav moves to the top (see BottomNav.css),
+   so this bar should sit at the true bottom, not stacked above a
+   mobile nav that no longer exists there. */
+@media (min-width: 1024px) {
+  .dish__action-bar {
+    bottom: 0;
+  }
+}

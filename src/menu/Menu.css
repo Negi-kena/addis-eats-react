@@ -1,0 +1,106 @@
+.menu {
+  padding-top: var(--space-5);
+  padding-bottom: var(--space-8);
+}
+
+.menu__header h1 {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+}
+
+.menu__search {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  padding: var(--space-3) var(--space-4);
+  margin-top: var(--space-4);
+  color: var(--color-text-muted);
+}
+
+.menu__search input {
+  border: none;
+  outline: none;
+  background: transparent;
+  flex: 1;
+  color: var(--color-text);
+}
+
+.menu__categories {
+  display: flex;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+  overflow-x: auto;
+  padding-bottom: var(--space-1);
+}
+
+.menu__category-pill {
+  flex-shrink: 0;
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-full);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.menu__category-pill--active {
+  background: var(--color-text);
+  color: #fff;
+  border-color: var(--color-text);
+}
+
+.menu__section-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-top: var(--space-6);
+  margin-bottom: var(--space-3);
+}
+
+.menu__section-heading h2 {
+  font-size: var(--font-size-lg);
+}
+
+.menu__section-heading span {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+.menu__status {
+  color: var(--color-text-muted);
+  padding: var(--space-6) 0;
+  text-align: center;
+}
+
+.menu__status--error {
+  color: var(--color-accent);
+}
+
+.menu__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-3);
+}
+
+@media (max-width: 380px) {
+  .menu__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 768px) {
+  .menu__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .menu__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
