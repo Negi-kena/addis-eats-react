@@ -5,7 +5,7 @@ import { CheckCircle2 } from 'lucide-react';
 import { useAuth } from '../auth/AuthContext.jsx';
 import { selectCartItems, selectCartSubtotal, clearCart } from '../cart/cartSlice.js';
 import { placeOrder, selectOrders } from '../orders/ordersSlice.js';
-import { generateOrderId } from '../orders/generateOrderID.js';
+import { generateOrderId } from '../orders/generateOrderId.js';
 import { validateCheckoutForm } from './validate.js';
 import { DELIVERY_AREAS, getDeliveryEstimate } from '../utils/deliveryEstimate.js';
 import { formatCurrency } from '../utils/formatCurrency.js';
